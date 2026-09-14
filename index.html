@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo Paleontológico y Arqueológico | Tarija</title>
+    <style>
+        :root {
+            --primary-color: #8b2626;
+            --secondary-color: #d97736;
+            --bg-color: #f8f6f0;
+            --card-bg: #ffffff;
+            --text-color: #2c2c2c;
+            --accent-color: #4a5d4e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #5a1818);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 8px 0 15px 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .lang-switch {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .lang-switch:hover {
+            background-color: #b85e24;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .museum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .exhibit-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 4px solid var(--secondary-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .exhibit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+        }
+
+        .card-img-container {
+            width: 100%;
+            height: 220px;
+            background-color: #e5e5e5;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .exhibit-card:hover .card-video {
+            transform: scale(1.04);
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .student-badge {
+            align-self: flex-start;
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-title {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0 0 15px 0;
+            flex-grow: 1;
+        }
+
+        .btn-more {
+            display: inline-block;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #2c2c2c;
+            color: white;
+            margin-top: 50px;
+            font-size: 0.85rem;
+        }
+
+        .lang-en {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="lang-es">Museo Paleontológico y Arqueológico</h1>
+        <h1 class="lang-en">Paleontological and Archaeological Museum</h1>
+        <p class="lang-es">Colección e Investigación Estudiantil | Tarija, Bolivia</p>
+        <p class="lang-en">Student Research & Collection | Tarija, Bolivia</p>
+        <button class="lang-switch" onclick="toggleLanguage()">Switch to English 🌐</button>
+    </header>
+
+    <div class="container">
+        <div class="museum-grid">
+
+            <!-- PIEZA 1: Chaetophractus Nationi -->
+            <a href="piezas/chaetophractus.html" class="card-link">
+                <article class="exhibit-card">
+                    <div class="card-img-container">
+                        <video class="card-video" autoplay loop muted playsinline>
+                            <source src="imagenes/armadillo.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <span class="student-badge">Investigador: Andrés Rocabado</span>
+                        
+                        <div class="lang-es">
+                            <h2 class="card-title">Chaetophractus Nationi</h2>
+                            <p class="card-text">Mamífero autóctono (Quirquincho Andino) del orden Cingulata y familia Chlamyphoridae.</p>
+                            <span class="btn-more">Ver ficha completa →</span>
+                        </div>
+
+                        <div class="lang-en">
+                            <h2 class="card-title">Chaetophractus Nationi</h2>
+                            <p class="card-text">Native mammal (Andean Armadillo) belonging to the order Cingulata.</p>
+                            <span class="btn-more">View full details →</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- PIEZA 2: Hombre de San Luis -->
+            <a href="piezas/hombre-san-luis.html" class="card-link">
+                <article class="exhibit-card">
+                    <div class="card-img-container">
+                        <video class="card-video" autoplay loop muted playsinline>
+                            <source src="imagenes/hombresl.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <span class="student-badge">Investigador: Andrés Rocabado</span>
+                        
+                        <div class="lang-es">
+                            <h2 class="card-title">El Hombre de San Luis</h2>
+                            <p class="card-text">Hallazgo osteológico humano más antiguo registrado en Bolivia (9,430 - 7,695 años AP).</p>
+                            <span class="btn-more">Ver ficha completa →</span>
+                        </div>
+
+                        <div class="lang-en">
+                            <h2 class="card-title">The Man of San Luis</h2>
+                            <p class="card-text">Oldest human osteological find recorded in Bolivia (9,430 - 7,695 years BP).</p>
+                            <span class="btn-more">View full details →</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- PIEZA 3: Armas de Combate -->
+            <a href="piezas/armas-combate.html" class="card-link">
+                <article class="exhibit-card">
+                    <div class="card-img-container">
+                        <video class="card-video" autoplay loop muted playsinline>
+                            <source src="imagenes/armas-combate.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <span class="student-badge">Investigadora: Ariana Conde</span>
+                        
+                        <div class="lang-es">
+                            <h2 class="card-title">Armas de Combate e Incaicas</h2>
+                            <p class="card-text">Herramientas y artefactos líticos del Horizonte Tardío (1450-1550 d.C.) en Tarija.</p>
+                            <span class="btn-more">Ver ficha completa →</span>
+                        </div>
+
+                        <div class="lang-en">
+                            <h2 class="card-title">Combat & Inca Weapons</h2>
+                            <p class="card-text">Lithic tools and artifacts from the Late Horizon (1450–1550 AD) in Tarija.</p>
+                            <span class="btn-more">View full details →</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- PIEZA 4: Yicas Tradicionales -->
+            <a href="piezas/yicas-tobas.html" class="card-link">
+                <article class="exhibit-card">
+                    <div class="card-img-container">
+                        <video class="card-video" autoplay loop muted playsinline>
+                            <source src="imagenes/yicas-tobas.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <span class="student-badge">Investigadora: Malena Vargas</span>
+                        
+                        <div class="lang-es">
+                            <h2 class="card-title">Yicas Tradicionales</h2>
+                            <p class="card-text">Artesanías tejidas en fibra de caraguatá originarias de la tribu Toba en Entre Ríos.</p>
+                            <span class="btn-more">Ver ficha completa →</span>
+                        </div>
+
+                        <div class="lang-en">
+                            <h2 class="card-title">Traditional Yicas</h2>
+                            <p class="card-text">Handcrafted caraguatá fiber weavings from the Toba tribe in Entre Ríos.</p>
+                            <span class="btn-more">View full details →</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- PIEZA 5: Gliptodonte -->
+            <a href="piezas/gliptodonte.html" class="card-link">
+                <article class="exhibit-card">
+                    <div class="card-img-container">
+                        <video class="card-video" autoplay loop muted playsinline>
+                            <source src="imagenes/gliptodonte.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <span class="student-badge">Investigadora: Camila Solares</span>
+                        
+                        <div class="lang-es">
+                            <h2 class="card-title">Gliptodonte</h2>
+                            <p class="card-text">Mamífero gigante del Pleistoceno provisto de un acorazado caparazón rígido.</p>
+                            <span class="btn-more">Ver ficha completa →</span>
+                        </div>
+
+                        <div class="lang-en">
+                            <h2 class="card-title">Glyptodont</h2>
+                            <p class="card-text">Giant Pleistocene mammal featuring a massive dome-shaped shell.</p>
+                            <span class="btn-more">View full details →</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- PIEZA 6: Bolivianita -->
+            <a href="piezas/bolivianita.html" class="card-link">
+                <article class="exhibit-card">
+                    <div class="card-img-container">
+                        <video class="card-video" autoplay loop muted playsinline>
+                            <source src="imagenes/bolivianita.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                    <div class="card-body">
+                        <span class="student-badge">Investigadora: Zaira Silva</span>
+                        
+                        <div class="lang-es">
+                            <h2 class="card-title">La Bolivianita</h2>
+                            <p class="card-text">Gema bicolor exclusiva que combina fusiones naturales de amatista y citrino.</p>
+                            <span class="btn-more">Ver ficha completa →</span>
+                        </div>
+
+                        <div class="lang-en">
+                            <h2 class="card-title">Bolivianite Gem</h2>
+                            <p class="card-text">Exclusive bicolor gemstone featuring natural combinations of amethyst and citrine.</p>
+                            <span class="btn-more">View full details →</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Museo Paleontológico y Arqueológico - Tarija, Bolivia</p>
+    </footer>
+
+    <script>
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            const esElements = document.querySelectorAll('.lang-es');
+            const enElements = document.querySelectorAll('.lang-en');
+            const btn = document.querySelector('.lang-switch');
+
+            if (currentLang === 'es') {
+                esElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                btn.textContent = 'Cambiar a Español 🌐';
+                currentLang = 'en';
+            } else {
+                esElements.forEach(el => el.style.display = 'block');
+                enElements.forEach(el => el.style.display = 'none');
+                btn.textContent = 'Switch to English 🌐';
+                currentLang = 'es';
+            }
+        }
+    </script>
+</body>
+</html>
