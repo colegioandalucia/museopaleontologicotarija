@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolivianita: El Corazón Bicolor de Bolivia | Museo Paleontológico</title>
+    <style>
+        :root {
+            --primary-color: #1F325C;   /* Azul Marino */
+            --accent-color: #008855;    /* Verde Esmeralda */
+            --secondary-color: #008855; /* Verde Esmeralda */
+            --bg-color: #F4F6F8;
+            --card-bg: #FFFFFF;
+            --text-color: #2C3E50;
+            --light-gray: #EAECEE;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 1.2rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .lang-switch {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .lang-switch:hover {
+            background-color: #1F325C;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .exhibit-detail {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        .video-container {
+            width: 100%;
+            padding: 20px 0;
+            background-color: #f1ede4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-player {
+            width: 240px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .student-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            margin: 0 0 15px 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        .lang-en {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="nav-btn">← Volver al inicio</a>
+        <button class="lang-switch" onclick="toggleLanguage()">Switch to English 🌐</button>
+    </header>
+
+    <div class="container">
+        <article class="exhibit-detail">
+            <div class="video-container">
+                <video class="video-player" autoplay loop muted playsinline>
+                    <source src="../imagenes/bolivianita.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video HTML5.
+                </video>
+            </div>
+
+            <div class="content">
+                <span class="student-badge">Gema Nacional de Bolivia</span>
+
+                <!-- Idioma Español -->
+                <div class="lang-es">
+                    <h1>La Bolivianita: El Corazón Bicolor de Bolivia</h1>
+                    <p>
+                        La bolivianita, conocida científicamente como ametrino, es una variedad de cuarzo (SiO₂) que se caracteriza por presentar naturalmente dos colores en un mismo cristal: violeta, propio de la amatista, y amarillo, relacionado con el citrino. Tiene una dureza de 7 en la escala de Mohs y su coloración se debe a condiciones especiales durante su formación, relacionadas principalmente con el hierro y la temperatura. 
+                    </p>
+                    <p>
+                        Esta combinación de colores se produce de manera natural y no por un tratamiento artificial. La principal fuente comercial de esta gema es la mina Anahí, ubicada en la provincia Germán Busch, en el departamento de Santa Cruz, por lo que es considerada una de las riquezas minerales más representativas de Bolivia.
+                    </p>
+                </div>
+
+                <!-- Idioma Inglés -->
+                <div class="lang-en">
+                    <h1>The Bolivianite: Bolivia's Bicolor Heart</h1>
+                    <p>
+                        Bolivianite, scientifically known as ametrine, is a variety of quartz (SiO₂) characterized by having two natural colors in the same crystal: violet, typical of amethyst, and yellow, related to citrine. It has a hardness of 7 on the Mohs scale, and its colors are produced by special conditions during its formation, mainly related to iron and temperature.
+                    </p>
+                    <p>
+                        This combination of colors occurs naturally and is not produced by artificial treatment. The main commercial source of this gemstone is the Anahí mine, located in Germán Busch Province, in the department of Santa Cruz, making it one of the most representative mineral resources of Bolivia.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>© 2026 Museo Paleontológico Local - Tarija, Bolivia</p>
+    </footer>
+
+    <script>
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            const esElements = document.querySelectorAll('.lang-es');
+            const enElements = document.querySelectorAll('.lang-en');
+            const btn = document.querySelector('.lang-switch');
+
+            if (currentLang === 'es') {
+                esElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                btn.textContent = 'Cambiar a Español 🌐';
+                currentLang = 'en';
+            } else {
+                esElements.forEach(el => el.style.display = 'block');
+                enElements.forEach(el => el.style.display = 'none');
+                btn.textContent = 'Switch to English 🌐';
+                currentLang = 'es';
+            }
+        }
+    </script>
+</body>
+</html>
